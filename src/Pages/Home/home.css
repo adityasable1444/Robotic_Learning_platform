@@ -1,0 +1,44 @@
+.home {
+    padding: 2rem;
+    background-color: antiquewhite;
+    width: 100vw;   
+    box-sizing: border-box;
+    /* height: 100%; */
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for 3 cards in a row */
+    gap: 2rem; /* gap between cards */
+    justify-items: center; /* center each card horizontally in its cell */
+    align-items: center; /* center vertically in each cell */
+  }
+  
+  .cards-container .open p{
+    color: black;
+  }
+  .card {
+    background-color: #33526e;
+    color: white;
+    width: 250px;   /* Increased width */
+    height: 200px;  /* Increased height */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* subtle shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center content vertically */
+  }
+  
+  .card button {
+    margin-top: 50px;
+    background-color: #ebfa1e;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  

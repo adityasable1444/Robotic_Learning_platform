@@ -1,0 +1,23 @@
+/* NewScreen.css */
+.new-screen {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .left-panel {
+    width: 20%;
+    background-color: #91c8ff;
+    color: white;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .right-panel {
+    width: 80%;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
