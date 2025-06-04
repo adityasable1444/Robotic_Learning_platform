@@ -4,7 +4,8 @@ import Navbar from "./Component/Navbar/Navbar";
 import Home from "./Pages/Home/home";
 import About from "./Pages/About/about";
 import Contact from "./Pages/Contact/contact";
-import Newscreen from "./Pages/Newscreen/newscreen"; // Import the new screen
+import Newscreen from "./Pages/Newscreen/newscreen";
+import SimulationClient from "./Component/Navbar/SimulationClient"; // ⬅️ new import
 
 export default function App() {
   return (
@@ -14,7 +15,8 @@ export default function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/new-screen' element={<Newscreen />} /> {/* New Route */}
+        <Route path='/new-screen' element={<Newscreen />} />
+        <Route path='/simulate' element={<SimulationClient clientId="user1" />} /> {/* ⬅️ new route */}
       </Routes>
     </>
   );
