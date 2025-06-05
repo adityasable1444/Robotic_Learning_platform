@@ -7,6 +7,7 @@ import mujoco
 import mujoco.viewer
 import PIL.Image
 from dm_control import suite
+import traceback
 
 class SimulationManager:
     def __init__(self):
@@ -25,8 +26,8 @@ class SimulationManager:
             return base64.b64encode(buf.getvalue()).decode("utf-8")
         except Exception as e:
             print("❌ render_frame failed:", e)
+            traceback.print_exc()
             return None
-
 
     def get_control_info(self):
         nu = self.env.physics.model.nu
@@ -51,9 +52,10 @@ class SimulationManager:
                 img_data = self.render_frame()
                 if img_data:
                     await send_fn({"type": "frame", "data": img_data})
+                await asyncio.sleep(self.time_step)
             except Exception as e:
                 print("❌ Simulation loop error:", e)
-
+                traceback.print_exc()
 
     def stop_simulation(self):
         self.running = False

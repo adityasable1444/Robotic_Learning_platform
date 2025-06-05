@@ -49,7 +49,10 @@ const NewScreen = () => {
               step={0.01}
               value={controlValues[i]}
               onChange={(e) => updateControl(i, e.target.value)}
+              style={{ width: '100%' }}
             />
+<span>{controlValues[i]}</span>
+
             <span>{controlValues[i]}</span>
           </div>
 
