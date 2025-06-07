@@ -1,51 +1,75 @@
 .new-screen {
   display: flex;
   height: 100vh;
+  margin: 0;
   font-family: Arial, sans-serif;
 }
 
 .left-panel {
-  flex: 1;
+  width: 250px;
   background-color: #90caf9;
   padding: 20px;
+  box-sizing: border-box;
   overflow-y: auto;
-  color: #000;
 }
 
 .left-panel h3 {
-  margin-bottom: 20px;
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
 .control-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .control-group label {
   display: block;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  color: #000;
 }
 
 .control-group input[type="range"] {
   width: 100%;
 }
 
-.control-group span {
-  display: block;
+.control-group .value-display {
   margin-top: 4px;
   font-size: 0.9rem;
   color: #333;
 }
 
+.state-display {
+  margin-top: 20px;
+}
+
+.state-display pre {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 4px;
+  color: #000;
+  font-size: 0.9rem;
+}
+
 .right-panel {
-  flex: 4;
-  background-color: #f5f5f5;
-  padding: 20px;
+  flex: 1;
+  position: relative;
+  background-color: #333;
   overflow: hidden;
 }
 
-.right-panel img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #ccc;
+.right-panel h3 {
+  color: #fff;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 10;
+}
+
+.right-panel canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
